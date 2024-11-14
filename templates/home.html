@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block todo %}
+
+<div class="container mt-4">
+
+
+  <!-- {% if user %}   -->
+  <!-- {% for row in user.todos %}
+            <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{row.title}}</td>
+            <td>{{row.desc}}</td>
+            <td class="d-none d-sm-block border-bottom-0">{{row.CreatedAt.strftime('%Y-%m-%d')}}</td>
+            <td>
+              <a href="/update/{{row.sno}}" type="button" class="btn btn-info btn-sm mb-2">Update</a>
+              <a href="/delete/{{row.sno}}" type="button" class="btn btn-danger btn-sm mb-2">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+        {% endif %} -->
+
+  <div class="card">
+    <div class="card-header">
+      Submit Video
+      <form action="/submit-url" method="POST">
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" name="url" style="width: 80%;" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+{% endblock %}

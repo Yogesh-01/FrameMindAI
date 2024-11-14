@@ -1,0 +1,107 @@
+/* General Styles */
+/* body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ece5dd; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+.chat-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #5e615f; /* WhatsApp green */
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #aaaaaa; /* Light green background for user */
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.ai-message {
+    background-color: #f1f0f0; /* Light gray background for AI */
+    align-self: flex-start;
+}
+
+.row.footer {
+    display: none;
+}
+
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    align-items: center;
+    gap: 10px;
+}
+
+textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    resize: none;
+    outline: none;
+    background-color: #f7f7f7;
+    font-size: 14px;
+}
+
+.send-btn {
+    background-color: #353635; /* WhatsApp green */
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.send-btn:hover {
+    background-color: #128c7e; /* Darker green on hover */
+}
+
+.send-btn:focus {
+    outline: none;
+}

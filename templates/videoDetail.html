@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block todo %}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="main-content">
+                <table class="table table-hover">
+                    <tbody class="border border-light">
+
+
+
+
+                        <tr>
+                            <td style="vertical-align:top;">
+                                <iframe width="100%" height="540"
+                                    src="https://www.videoindexer.ai/embed/player/c7ae81e6-9046-49b0-8524-cc8a56ed622a/{{ id }}/?accessToken={{ access_token }}&locale=en&location=trial"
+                                    frameborder="0" allowfullscreen></iframe>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:bottom;">
+                                <iframe id="insights_iframe" width="100%" height="720"
+                                    src="https://www.videoindexer.ai/embed/insights/c7ae81e6-9046-49b0-8524-cc8a56ed622a/{{ id }}/?accessToken={{access_token}}&locale=en&location=trial"
+                                    frameborder="0" allowfullscreen></iframe>
+
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td>
+                                <div class="chat-container">
+                                    <div class="header">
+                                        <h1>Chat with AI</h1>
+                                    </div>
+                                    <div class="chat-box" id="chat-box"></div>
+                                    <div class="input-container">
+                                        <textarea id="user-input" placeholder="Type a message..." rows="1"></textarea>
+                                        <button id="send-button" class="send-btn">
+                                            <i class="fa fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr> -->
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="chat-container">
+                <div class="header">
+                    <h1>Chat with AI</h1>
+                </div>
+                <div class="chat-box" id="chat-box"></div>
+                <div class="input-container">
+                    <textarea id="user-input" placeholder="Type a message..." rows="1" class="form-control"></textarea>
+                    <button id="send-button" class="btn btn-primary mt-2">
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

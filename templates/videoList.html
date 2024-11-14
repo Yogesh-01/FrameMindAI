@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block todo %}
+<div class="container mt-5">
+    <div class="card">
+        <h5 class="card-header">Video List</h5>
+        <div class="card-body">
+          <h5 class="card-title">Uploaded Videos</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+            <a class="stretched-link" style="font-weight: bold; color: black;">Video ID</a>
+            <a class="stretched-link" style="font-weight: bold; color: black;">Progress</a>
+            </li>
+            {% for video_id in videos %}
+            
+            <li class="list-group-item">
+              {% if video_id.processingProgress|length!=4 %}
+                <a href="" class="stretched-link" style="color: gray;">{{ video_id.id }} </a>
+                <a href="" class="stretched-link" style="color: gray;">{{ video_id.processingProgress }}</a>
+              {% endif %}
+              {% if video_id.processingProgress|length==4 %}
+              <a href="/video/{{ video_id.id }}" class="stretched-link" style="margin-right: 5px;">{{ video_id.id }} </a>
+                <a href="/video/{{ video_id.id }}" class="stretched-link" style="margin-left: 5px;">{{ video_id.processingProgress }}</a>
+              </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          <a href="/" class="btn btn-primary mt-3">Go Home</a>
+        </div>
+      </div>
+</div>
+{% endblock %}
